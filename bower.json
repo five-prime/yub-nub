@@ -1,0 +1,21 @@
+{
+  "name": "yubnub",
+  "homepage": "https://github.com/five-prime/test",
+  "authors": [
+    "five-prime <5iveprimedesign@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.6.1"
+  }
+}
