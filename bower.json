@@ -16,6 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.6.1"
+    "polymer": "Polymer/polymer#^1.6.1",
+    "iron-iconset": "polymerelements/iron-iconset#^1.0.4",
+    "iron-elements": "PolymerElements/iron-elements#^1.0.10",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "pubnub-element": "^4.0.1"
   }
 }

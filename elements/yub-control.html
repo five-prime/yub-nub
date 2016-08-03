@@ -1,0 +1,99 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>yub-control.html</title>
+		<link href="../app/bower_components/polymer/polymer.html" rel="import">
+		<link href="../app/bower_components/paper-button/paper-button.html" rel="import">
+		<link href="../app/bower_components/paper-fab/paper-fab.html" rel="import">
+		<link href="../app/bower_components/iron-icons/iron-icons.html" rel="import">
+		<link href="../app/bower_components/iron-icons/hardware-icons.html" rel="import">
+		<link href="../app/bower_components/pubnub-element/pubnub-element.html" rel="import">
+	</head>
+	<body>
+
+		<dom-module id="yub-control">
+	
+		<style>
+	
+	
+		</style>
+	
+		<template>
+			<div id="gamepad" class="card">
+				
+				<div id="arrow-btns">
+					
+					<p id="channel" hidden="{{!isConfigured}}">{{channel}}</p>
+					
+					<paper-button data-key="UP" on-down="handleButton">
+					
+					<iron-icon data-key="UP" icon="hardware:keyboard-arrow-up"></iron-icon>
+					
+					</paper-button>
+					
+					<br>
+		
+					<paper-button  data-key="LEFT" on-down="handleButton">
+					
+					<iron-icon data-key="LEFT" icon="hardware:keyboard-arrow-left"></iron-icon>
+			
+					</paper-button>
+			
+					<paper-button  data-key="RIGHT" on-down="handleButton">
+				
+					<iron-icon data-key="RIGHT" icon="hardware:keyboard-arrow-right"></iron-icon>
+			
+					</paper-button>
+				
+					<br/>
+			
+					<paper-button data-key="DOWN" on-down="handleButton">
+				
+					<iron-icon data-key="DOWN" icon="hardware:keyboard-arrow-down"></iron-icon>
+			
+					</paper-button> 
+
+					<br>
+			
+				<img src="../pubnub.png" style="width: 225px; margin: 15px;"></canvas>
+		</div>
+		<div id="action-btns">
+			<paper-fab icon="icons:close" data-key="X" on-down="handleButton"></paper-fab>
+			<paper-fab icon="icons:radio-button-unchecked" data-key="O" on-tap="handleButton"></paper-fab>
+			<br> 
+			<paper-fab mini icon="polymer" style="background:black" on-tap="changeChannel"></paper-fab>
+		</div>
+	</div>
+
+	<!--pubnub element-->
+	<core-pubnub publish_key="pub-c-8191bbfa-7ca4-4dce-ab94-83f27085d8a7" subscribe_key="sub-c-f66d4c6a-592b-11e6-b321-02ee2ddab7fe">
+<core-pubnub-publish id="pub" channel="{{channel}}" message="test"></core-pubnub-publish>
+		</core-pubnub>
+
+
+		</template>
+
+		</dom-module>
+
+		<script>
+		//element reg
+			Polymer ({
+				
+				is: "yub-control",
+				
+				properties:{
+				
+				// properties here
+				
+				},
+				
+				ready: function(){
+				
+				}
+			
+			});
+
+		</script>
+
+	</body>
+</html>
